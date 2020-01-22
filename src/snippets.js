@@ -11,6 +11,39 @@ import React from "react";
 
 // { urlParam: Snippet }
 const snippets = {
+  flex_grid: {
+    name: "Flex(ible) Grid of Cards",
+    html: (
+      <div className="flexParent">
+        <div className="ignore card">0) random</div>
+        <div className="ignore card">1) cards</div>
+        <div className="ignore card">2) that</div>
+        <div className="ignore card">3) wrap</div>
+        <div className="ignore card">4) in</div>
+        <div className="ignore card">5) parent</div>
+      </div>
+    ),
+    css: `.flexParent {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    `,
+    hidden: `&.mini .parent {
+      height: var(--max-height);
+      grid-template-columns: 30px 1fr;
+    }
+
+    .card {
+      width: calc(40% - 24px);
+      overflow: hidden;
+      white-space:nowrap;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+  `,
+    about:
+      "Have a sidebar of specific width sit next to main content. Can hide the sidebar if the first parameter of grid-template-columns is set to 0.",
+  },
   pos_abs: {
     name: "Absolutely Position a Box",
     html: (
@@ -96,6 +129,28 @@ const snippets = {
     hidden: ``,
     about:
       "Center a div in the middle of another div with a flexbox. This will not ignore sibling elements.",
+  },
+  grid_sidebar: {
+    name: "Sidebar with Grid",
+    html: (
+      <div className="parent">
+        <div className="ignore">sidebar</div>
+        <div className="ignore">main content</div>
+      </div>
+    ),
+    css: `.parent {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      grid-gap: 8px;
+      height: 400px;
+    }`,
+    hidden: `&.mini .parent {
+      height: var(--max-height);
+      grid-template-columns: 30px 1fr;
+    }
+    `,
+    about:
+      "Have a sidebar of specific width sit next to main content. Can hide the sidebar if the first parameter of grid-template-columns is set to 0.",
   },
   empty: {
     name: "404 No Snippet",

@@ -30,6 +30,11 @@ const Mini = styled(({ className, html }) => {
     border-color: var(--silver-focus);
   }
 
+  & > div {
+    height: var(--max-height);
+    overflow: hidden;
+  }
+
   ${props => props.hiddenStyles}
 
   ${props => props.css}
