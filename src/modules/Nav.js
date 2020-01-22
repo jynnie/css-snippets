@@ -47,8 +47,8 @@ const Nav = styled(({ className }) => {
   }
 
   @media screen and (max-width: 640px) {
-    .Nav-container {
-      margin: 36px 32px 0;
+    & {
+      margin: 36px 1em 0;
     }
   }
 `;

@@ -54,6 +54,12 @@ const Home = styled(({ className }) => {
   );
 })`
   margin-top: 20vh;
+
+  @media screen and (max-width: 640px) {
+    & {
+      margin-top: 40px;
+    }
+  }
 `;
 
 export default Home;
