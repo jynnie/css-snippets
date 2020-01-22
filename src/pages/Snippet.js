@@ -7,27 +7,20 @@ import CodeBlock from "../modules/CodeBlock";
 import Container from "../modules/Container";
 import Preview from "../modules/Preview";
 
-const Snippet = styled(({ className }) => {
-  let css = `.Test-yellow {
-  color: var(--yella);
-}
-`;
+import snippets from "../snippets";
 
-  let hidden = `.Test-yellow {
-    padding: var(--s);
-    border: 1px solid var(--dark-grey);
-  }`;
+const Snippet = styled(({ className, snipId }) => {
+  let snip = snippets[snipId];
+  if (!snip) {
+    snip = snippets.empty;
+  }
 
   return (
     <Container className={classnames(className)}>
-      <h1>Snippet Name</h1>
+      <h1>{snip.name}</h1>
       <Box className="grid">
-        <Preview
-          html={<div className="Test-yellow">Preview</div>}
-          css={css}
-          hiddenStyles={hidden}
-        />
-        <CodeBlock code={css} />
+        <Preview html={snip.html} css={snip.css} hiddenStyles={snip.hidden} />
+        <CodeBlock code={snip.css} />
       </Box>
     </Container>
   );
@@ -39,7 +32,7 @@ const Snippet = styled(({ className }) => {
   }
 
   h1 {
-    color: var(--silver-text);
+    // color: var(--silver-text);
   }
 `;
 

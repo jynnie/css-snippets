@@ -14,6 +14,7 @@ const App = () => {
       <Nav />
       <Router>
         <Home path="/" />
+        <Snippet path="/snippet/:snipId" />
         <Snippet path="/snippet" />
         <NotFound default />
       </Router>

@@ -21,20 +21,6 @@
   max-width: 520px;
 }
 
-.Home-button {
-  background: var(--black);
-  border-radius: var(--radius-s);
-  padding: 0.5em 2.5em;
-  color: var(--s-white);
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-}
-
-.Home-button:hover {
-  background: var(--grey);
-}
-
 @media screen and (max-width: 720px) {
   .Home-header {
     font-size: 2.4em;

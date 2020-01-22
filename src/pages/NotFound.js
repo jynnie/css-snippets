@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import classnames from "classnames";
-import Box from "ui-box";
 
 import Container from "../modules/Container";
 
