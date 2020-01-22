@@ -22,8 +22,8 @@ const Listing = styled(({ className, snippet, id }) => {
     </Link>
   );
 })`
-  width: 100%;
-  height: 100px;
+  width: calc(100% - 48px);
+  min-height: 100px;
   padding: var(--m) var(--l);
   margin-bottom: var(--xl);
 
@@ -44,6 +44,10 @@ const Listing = styled(({ className, snippet, id }) => {
   }
   &:active {
     background-color: var(--silver-focus);
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 100px 1fr;
   }
 `;
 

@@ -12,7 +12,7 @@ import Box from "ui-box";
 const Mini = styled(({ className, html }) => {
   return <Box className={classnames(className, "u-relative mini")}>{html}</Box>;
 })`
-  --max-height: 80px;
+  --max-height: calc(100% - 2px - 16px);
 
   padding: 1px;
   font-size: 6px;
@@ -23,6 +23,11 @@ const Mini = styled(({ className, html }) => {
   div {
     padding: var(--s);
     border: 1px solid var(--dark-grey);
+  }
+
+  .ignore {
+    background: var(--silver);
+    border-color: var(--silver-focus);
   }
 
   ${props => props.hiddenStyles}
