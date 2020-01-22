@@ -32,6 +32,11 @@ const snippets = {
     hidden: `&.mini .parent {
       height: var(--max-height);
     }
+
+    &.mini .absChild {
+      top: 20px;
+      left: 30px;
+    }
     `,
     about:
       "Position a div in a specific place, ignoring other content in the parent. Useful for putting pop ups and tooltips in their place.",
