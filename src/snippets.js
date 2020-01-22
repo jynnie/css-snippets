@@ -44,6 +44,47 @@ const snippets = {
     about:
       "Flexible container for cards that wraps when it cannot fit another card on the same line. Useful for not just cards.",
   },
+  hover_transition: {
+    name: "Hover Transitions & More",
+    html: (
+      <div>
+        <div class="skewOnHover">hover over me</div>
+        <div class="skewOnHoverNoTransition">hover over me</div>
+        <div class="newColorWhenClicking">click on me</div>
+      </div>
+    ),
+    css: `.skewOnHover {
+      transition: transform 1s;
+    }
+
+    .skewOnHover:hover {
+      transform: skew(30deg);
+    }
+
+    .skewOnHoverNoTransition:hover {
+      transform: skew(30deg);
+    }
+
+    .newColorWhenClicking {
+      transition: background 1s;
+    }
+
+    .newColorWhenClicking:active {
+      background-color: #fe82de;
+    }
+    `,
+    hidden: `
+      div {
+        position: relative;
+      }
+
+      .skewOnHover, .skewOnHoverNoTransition {
+        margin-bottom: var(--s);
+      }
+    `,
+    about:
+      "Examples of how to use :hover and :active psuedo-selectors to have dynamic styles. Demonstrates transitions for smoothing. Make your buttons and links feel more alive!",
+  },
   pos_abs: {
     name: "Absolutely Position a Box",
     html: (
