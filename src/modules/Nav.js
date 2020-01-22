@@ -47,19 +47,8 @@ const Nav = styled(({ className }) => {
   }
 
   @media screen and (max-width: 640px) {
-    .Nav-header {
-      display: none;
-    }
-
     .Nav-container {
       margin: 36px 32px 0;
-    }
-
-    .Nav-linkContainer {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
   }
 `;

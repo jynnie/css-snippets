@@ -18,6 +18,7 @@ const Snippet = styled(({ className, snipId }) => {
   return (
     <Container className={classnames(className)}>
       <h1>{snip.name}</h1>
+      <p>{snip.about}</p>
       <Box className="grid">
         <Preview html={snip.html} css={snip.css} hiddenStyles={snip.hidden} />
         <CodeBlock code={snip.css} />
@@ -31,8 +32,10 @@ const Snippet = styled(({ className, snipId }) => {
     grid-gap: var(--m);
   }
 
-  h1 {
-    // color: var(--silver-text);
+  @media screen and (max-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 

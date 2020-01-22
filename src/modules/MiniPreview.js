@@ -10,13 +10,20 @@ import Box from "ui-box";
  * @param {bool} static removes hover effects
  */
 const Mini = styled(({ className, html }) => {
-  return <Box className={classnames(className, "u-relative")}>{html}</Box>;
+  return <Box className={classnames(className, "u-relative mini")}>{html}</Box>;
 })`
+  --max-height: 80px;
+
   padding: 1px;
   font-size: 6px;
   background: var(--white);
   border-radius: var(--radius-s);
   overflow: hidden;
+
+  div {
+    padding: var(--s);
+    border: 1px solid var(--dark-grey);
+  }
 
   ${props => props.hiddenStyles}
 
