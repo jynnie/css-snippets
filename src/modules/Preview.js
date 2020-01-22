@@ -38,6 +38,11 @@ const AddClassAfter = css => {
   return afters.join("\n");
 };
 
+/**
+ * @param html
+ * @param css
+ * @param hiddenStyles
+ */
 const Preview = styled(({ className, html }) => {
   return <Box className={classnames(className, "u-relative")}>{html}</Box>;
 })`

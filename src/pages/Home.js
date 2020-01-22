@@ -23,7 +23,9 @@ const Home = styled(({ className }) => {
           <span className="u-yellow">.</span>class help
         </h1>
         <div className="Home-descript">
-          a collection of common css solutions – lovingly crafted by{" "}
+          a collection of css solutions for common layouts & styles
+          <br />
+          lovingly crafted for{" "}
           <a
             className="u-pink"
             target="_blank"
@@ -32,7 +34,15 @@ const Home = styled(({ className }) => {
           >
             weblab.mit.edu
           </a>{" "}
-          by jynnie
+          by{" "}
+          <a
+            className="u-pink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://jynnie.me/"
+          >
+            jynnie
+          </a>
         </div>
       </div>
       <Box maxWidth={600} width="100%">

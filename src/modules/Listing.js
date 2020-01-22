@@ -4,15 +4,17 @@ import classnames from "classnames";
 import Box from "ui-box";
 import { Link } from "@reach/router";
 
+import Mini from "./MiniPreview";
+
 /**
  * @param {Snippet} snippet
  * @param {string} id for url link to /snippet/id
  */
 const Listing = styled(({ className, snippet, id }) => {
-  let { name, about } = snippet;
+  let { name, about, html, css, hidden } = snippet;
   return (
     <Link className={classnames(className)} to={`/snippet/${id}`}>
-      <Box>Preview</Box>
+      <Mini html={html} css={css} hiddenStyles={hidden} />
       <Box>
         <Box className="u-bold">{name}</Box>
         <Box>{about}</Box>
@@ -21,10 +23,14 @@ const Listing = styled(({ className, snippet, id }) => {
   );
 })`
   width: 100%;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-gap: var(--m);
+  height: 100px;
   padding: var(--m) var(--l);
+  margin-bottom: var(--xl);
+
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-gap: var(--l);
+
   background-color: var(--silver);
   border-radius: var(--radius-m);
   transition: background 0.2s, transform 0.2s;
