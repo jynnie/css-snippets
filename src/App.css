@@ -1,0 +1,72 @@
+.u-flex {
+  display: flex;
+}
+
+.u-flexWrap {
+  flex-wrap: wrap;
+}
+
+.u-flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-flex-justifyCenter {
+  justify-content: center;
+}
+
+.u-flex-alignCenter {
+  align-items: center;
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}
+
+.u-bold {
+  font-weight: 600;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
+
+.u-blue {
+  color: var(--blue);
+}
+
+.u-pink {
+  color: var(--pink);
+}
+
+.u-yellow {
+  color: var(--yella);
+}
+
+.u-grey {
+  color: var(--grey-text);
+}
+
+.u-darkGrey {
+  color: var(--dark-grey);
+}
+
+.u-black {
+  color: var(--a-black);
+}
+
+.u-white {
+  color: var(--a-white);
+}
+
+.u-bold {
+  font-weight: 700;
+}

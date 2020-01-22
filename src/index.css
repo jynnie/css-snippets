@@ -1,0 +1,43 @@
+:root {
+  --blue: #26c1fc;
+  --blue-focus: #26acfc;
+  --pink: #fe82de;
+  --yella: #ffc215;
+  --black: #2e2e2e;
+  --grey: rgb(68, 68, 68);
+  --white: white;
+
+  --grey: #d0e2f4;
+  --grey-text: #7d9dbc;
+  --grey-focus: #bad2e8;
+  --dark-grey: #707070;
+
+  --radius-xs: 3px;
+  --radius-s: 4px;
+  --radius-m: 6px;
+
+  --xs: 4px;
+  --s: 8px;
+  --m: 16px;
+  --l: 24px;
+  --xl: 32px;
+  --xxl: 40px;
+
+  --headerFont: "Avenir Next", "Hind", sans-serif;
+  --bodyFont: "Open Sans", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700|Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--headerFont);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
