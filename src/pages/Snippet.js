@@ -20,12 +20,17 @@ const Snippet = styled(({ className }) => {
   return (
     <Container className={classnames(className)}>
       <h1>Snippet Name</h1>
-      <Box className="u-flex">
+      <Box className="grid">
         <div>Preview</div>
         <CodeBlock code={code} />
       </Box>
     </Container>
   );
-})``;
+})`
+  .grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+`;
 
 export default Snippet;

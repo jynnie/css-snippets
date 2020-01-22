@@ -1,9 +1,10 @@
 import React from "react";
 import { Router } from "@reach/router";
 
+import Nav from "./modules/Nav";
 import Home from "./pages/Home";
 import Snippet from "./pages/Snippet";
-import Nav from "./modules/Nav";
+import NotFound from "./pages/NotFound";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <Snippet path="/snippet" />
+        <NotFound default />
       </Router>
     </>
   );

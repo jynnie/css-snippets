@@ -12,12 +12,13 @@ const CodeBlock = styled(({ className, code }) => {
       language="css"
       style={docco}
       showLineNumbers
+      wrapLines
     >
       {code}
     </SyntaxHighlighter>
   );
 })`
-  width: 700px;
+  //   width: 600px;
 `;
 
 export default CodeBlock;
