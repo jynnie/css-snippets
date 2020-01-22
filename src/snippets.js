@@ -42,7 +42,7 @@ const snippets = {
     }
   `,
     about:
-      "Have a sidebar of specific width sit next to main content. Can hide the sidebar if the first parameter of grid-template-columns is set to 0.",
+      "Flexible container for cards that wraps when it cannot fit another card on the same line. Useful for not just cards.",
   },
   pos_abs: {
     name: "Absolutely Position a Box",
