@@ -18,7 +18,7 @@ const CodeBlock = styled(({ className, code }) => {
     </SyntaxHighlighter>
   );
 })`
-  //   width: 600px;
+  margin: 0;
 `;
 
 export default CodeBlock;
