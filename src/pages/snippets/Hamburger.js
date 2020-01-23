@@ -102,7 +102,7 @@ const HamburgerSnippet = styled(({ className }) => {
       <p>{snip.about}</p>
       <Box className="grid">
         <HamburgerPreview />
-        <Box>
+        <Box overflow="auto">
           <h2 style={{ marginTop: 0 }}>React</h2>
           <ReactCodeBlock />
 
@@ -142,7 +142,7 @@ const HamburgerSnippet = styled(({ className }) => {
 
   .grid {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-gap: var(--m);
   }
 
