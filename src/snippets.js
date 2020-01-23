@@ -270,6 +270,7 @@ const snippets = {
       position: relative;
     }
 
+    /* tooltip must be a child of tag */
     .content .tooltip {
       display: none;
       position: absolute;
