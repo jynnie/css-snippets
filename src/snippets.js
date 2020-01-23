@@ -12,6 +12,44 @@ import React from "react";
 
 // { urlParam: Snippet }
 const snippets = {
+  even_columns: {
+    name: "Even Responsive Columns",
+    html: (
+      <div className="flexParent">
+        <div className="child">evenly</div>
+        <div className="child">sized</div>
+        <div className="child">columns</div>
+      </div>
+    ),
+    css: `.flexParent {
+      display: flex;
+    }
+
+    .child {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    `,
+    hidden: `.flexParent {
+      height: 100px;
+    }
+
+    &.mini .flexParent {
+      height: var(--max-height);
+    }
+
+    .child {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .child + .child {
+      margin-left: 8px;
+    }
+  `,
+    about:
+      "Put content side by side with flex. With flex-basis and flex-grow they will also take up the same amount of space in a responsive layout.",
+  },
   flex_grid: {
     name: "Flex(ible) Grid of Cards",
     html: (
