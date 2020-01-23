@@ -230,6 +230,31 @@ const snippets = {
     about:
       "Have a sidebar of specific width sit next to main content. Can hide the sidebar if the first parameter of grid-template-columns is set to 0.",
   },
+  fixed_header: {
+    name: "Sticky Header Follows When Scrolling",
+    html: (
+      <div className="parent">
+        <div className="header">i'll follow you as you scroll!</div>
+      </div>
+    ),
+    css: `.header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }`,
+    hidden: `
+    .parent {
+      height: 200vh;
+    }
+
+    &.mini .parent {
+      height: var(--max-height);
+    }
+    `,
+    about:
+      "Positioning a header or just box such that it follows you as you scroll.",
+  },
   empty: {
     name: "404 No Snippet",
     html: (
