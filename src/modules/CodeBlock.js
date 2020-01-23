@@ -27,6 +27,10 @@ const CodeBlock = styled(({ className, code }) => {
   );
 })`
   margin: 0;
+
+  &:hover {
+    z-index: 999;
+  }
 `;
 
 export default CodeBlock;

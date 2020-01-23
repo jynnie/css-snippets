@@ -171,6 +171,43 @@ const snippets = {
     about:
       "Center a div in the middle of another div with a flexbox. This will not ignore sibling elements.",
   },
+  overflow_hidden: {
+    name: "Hide Overflowing Content",
+    html: (
+      <>
+        <div className="parentHides">
+          <div className="long ignore">
+            extremely looooooooong content clipped by the parent element
+          </div>
+        </div>
+        <div>
+          <div className="long ignore">
+            the parent of this element doesn't care and let's her run amok,
+            making life hard
+          </div>
+        </div>
+      </>
+    ),
+    css: `.parentHides {
+      overflow: hidden;
+      width: 443px;
+    }
+
+    .long {
+      width: 140%
+    }
+    `,
+    hidden: `
+    .parentHides {
+      margin-bottom: var(--m);
+    }
+    .long {
+      position: relative
+    }
+    `,
+    about:
+      "Hide content that goes out of bounds of the parent container. This works for containers with a bounded or defined width.",
+  },
   grid_sidebar: {
     name: "Sidebar with Grid",
     html: (
