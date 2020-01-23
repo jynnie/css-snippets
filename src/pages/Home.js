@@ -47,7 +47,7 @@ const Home = styled(({ className }) => {
       </div>
       <Box maxWidth={600} width="100%">
         {Object.keys(snippets).map(i => (
-          <Listing snippet={snippets[i]} id={i} />
+          <Listing snippet={snippets[i]} id={i} key={i} />
         ))}
       </Box>
     </Container>

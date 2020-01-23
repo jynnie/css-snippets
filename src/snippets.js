@@ -48,9 +48,9 @@ const snippets = {
     name: "Hover Transitions & More",
     html: (
       <div>
-        <div class="skewOnHover">hover over me</div>
-        <div class="skewOnHoverNoTransition">hover over me</div>
-        <div class="newColorWhenClicking">click on me</div>
+        <div className="skewOnHover">hover over me</div>
+        <div className="skewOnHoverNoTransition">hover over me</div>
+        <div className="newColorWhenClicking">click on me</div>
       </div>
     ),
     css: `.skewOnHover {
@@ -231,7 +231,7 @@ const snippets = {
       "Have a sidebar of specific width sit next to main content. Can hide the sidebar if the first parameter of grid-template-columns is set to 0.",
   },
   fixed_header: {
-    name: "Sticky Header Follows When Scrolling",
+    name: "Sticky Header Follows when Scrolling",
     html: (
       <div className="parent">
         <div className="header">i'll follow you as you scroll!</div>
