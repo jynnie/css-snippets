@@ -116,7 +116,7 @@ const snippets = {
     `,
     about:
       "Position a div in a specific place, ignoring other content in the parent. Useful for putting pop ups and tooltips in their place.",
-    related: ["tooltip"],
+    related: ["center_abs", "tooltip"],
   },
   center_abs: {
     name: "Absolutely Center a Box",
@@ -156,6 +156,7 @@ const snippets = {
     `,
     about:
       "Center a div of fixed height and width in the middle of another, ignoring other content in the parent. Useful for putting modals in their place.",
+    related: ["pos_abs"],
   },
   center_flex: {
     name: "Flex Center a Box",
@@ -210,6 +211,51 @@ const snippets = {
     `,
     about:
       "Hide content that goes out of bounds of the parent container. This works for containers with a bounded or defined width.",
+  },
+  hamburger: {
+    name: "Hamburger Menu",
+    html: (
+      <div className="navbar">
+        <img
+          className="hamburger"
+          alt="hamburger menu"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fb2%2FHamburger_icon.svg%2F1200px-Hamburger_icon.svg.png&f=1&nofb=1"
+        />
+      </div>
+    ),
+    css: `
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    /* applied to tag with both classes */
+    .show.menu {
+      display: block;
+    }
+    `,
+    hidden: `
+    .menu {
+      width: calc(100% - 18px);
+      background-color: var(--white);
+    }
+
+    .close {
+      margin-bottom: var(--s);
+    }
+
+    .ignore + .ignore {
+      margin-top: var(--s);
+    }
+
+    .hamburger {
+      width: 40px;
+    }
+    `,
+    about:
+      "Create a hamburger menu that shows up when the screen is smaller than a certain size. An easy way to make your menus responsive.",
   },
   grid_sidebar: {
     name: "Sidebar with Grid",

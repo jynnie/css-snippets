@@ -69,3 +69,7 @@
 .u-bold {
   font-weight: 700;
 }
+
+.u-marginNone {
+  margin: 0;
+}

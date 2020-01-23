@@ -12,3 +12,4 @@ $ yarn start
 ```
 
 css snippets in `snippets.js`
+special snippets with custom page in `pages/snippets/`

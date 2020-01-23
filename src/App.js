@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Snippet from "./pages/Snippet";
 import NotFound from "./pages/NotFound";
 
+import HamburgerSnippet from "./pages/snippets/Hamburger";
+
 import "./App.css";
 
 const App = () => {
@@ -14,6 +16,9 @@ const App = () => {
       <Nav />
       <Router>
         <Home path="/" />
+
+        <HamburgerSnippet exact path="/snippet/hamburger" />
+
         <Snippet path="/snippet/:snipId" />
         <Snippet path="/snippet" />
         <NotFound default />

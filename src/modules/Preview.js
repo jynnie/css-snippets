@@ -17,7 +17,7 @@ const removeSpaces = css => {
  *
  * @param {string} css
  */
-const AddClassAfter = css => {
+export const AddClassAfter = css => {
   let lines = removeSpaces(css).split("\n");
   let classes = lines.filter(l => l[0] === ".");
   let classNames = classes.map(c => c.split(" ")[0].slice(1));

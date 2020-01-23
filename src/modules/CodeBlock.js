@@ -3,7 +3,7 @@ import styled from "styled-components";
 import classnames from "classnames";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { nord } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 // Removes four spaces from beginning of all lines except first of css
 const removeSpaces = css => {
@@ -18,7 +18,7 @@ const CodeBlock = styled(({ className, code }) => {
     <SyntaxHighlighter
       className={classnames(className)}
       language="css"
-      style={docco}
+      style={nord}
       showLineNumbers
       wrapLines
     >
