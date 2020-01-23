@@ -7,6 +7,7 @@ import React from "react";
  * @property {string} css
  * @property {string} hidden styles
  * @property {string} about
+ * @property {string[]?} related reference to other snippets
  */
 
 // { urlParam: Snippet }
@@ -84,6 +85,7 @@ const snippets = {
     `,
     about:
       "Examples of how to use :hover and :active psuedo-selectors to have dynamic styles. Demonstrates transitions for smoothing. Make your buttons and links feel more alive!",
+    related: ["tooltip"],
   },
   pos_abs: {
     name: "Absolutely Position a Box",
@@ -114,6 +116,7 @@ const snippets = {
     `,
     about:
       "Position a div in a specific place, ignoring other content in the parent. Useful for putting pop ups and tooltips in their place.",
+    related: ["tooltip"],
   },
   center_abs: {
     name: "Absolutely Center a Box",
@@ -254,6 +257,34 @@ const snippets = {
     `,
     about:
       "Positioning a header or just box such that it follows you as you scroll.",
+  },
+  tooltip: {
+    name: "Custom Tooltip",
+    html: (
+      <div className="content">
+        something that might need clarifying
+        <div className="tooltip">tooltip</div>
+      </div>
+    ),
+    css: `.content {
+      position: relative;
+    }
+
+    .content .tooltip {
+      display: none;
+      position: absolute;
+      top: 38px;
+      right: 50%;
+    }
+
+    .content:hover .tooltip {
+      display: block;
+    }
+    `,
+    hidden: ``,
+    about:
+      "Customize a message that shows up when you hover over other content. To use the default tooltip, simply add the alt property to a tag, i.e: <div alt='tooltip'>content</div>.",
+    related: ["pos_abs", "hover_transition"],
   },
   empty: {
     name: "404 No Snippet",
