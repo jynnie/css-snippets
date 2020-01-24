@@ -20,5 +20,11 @@ pulled from [https://gist.github.com/cobyism/4730490](https://gist.github.com/co
 
 ```
 $ yarn build
-$ git subtree push --prefix build origin gh-pages
+$ git subtree push --prefix dist origin gh-pages
+```
+
+sometimes you might have to just
+
+```
+$ git push origin `git subtree split --prefix dist master`:gh-pages --force
 ```
