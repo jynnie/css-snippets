@@ -66,10 +66,18 @@ const snippets = {
       display: flex;
       flex-wrap: wrap;
     }
+
+    .card {
+      min-width: 160px;
+    }
     `,
     hidden: `&.mini .parent {
       height: var(--max-height);
       grid-template-columns: 30px 1fr;
+    }
+
+    &.mini .card {
+      min-width: 32px;
     }
 
     .card {
